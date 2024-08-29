@@ -1,0 +1,165 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: hsl(270, 20%, 20%);
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: hsl(270, 15%, 85%);
+}
+
+a:after {
+    color: white;
+}
+
+input {
+    height: 25px;
+    margin-right: 10px;
+}
+
+#searchBtn {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(270, 15%, 90%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: hsl(270, 20%, 20%);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    background: linear-gradient(10deg, hsl(270, 20%, 85%), hsl(270, 15%, 75%));
+    height: calc(100vh - 100px);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+#sidebar form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.genreBtn {
+    width: 150px;
+    height: 50px;
+    background-color: hsl(270, 20%, 20%);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.genreBtn:hover {
+    background-color: hsl(270, 20%, 40%);
+}
+
+#addAlbumBtn {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: hsl(270, 20%, 20%);
+    box-shadow: 2px 2px 10px hsl(270, 20%, 40%);
+}
+
+#addAlbumBtn:hover, form button:hover {
+    background-color: hsl(270, 15%, 85%);
+}
+
+.libraryDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+    width: 80%;
+}
+
+.albumCard {
+    height: 220px;
+    width: 180px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: hsl(270, 15%, 90%);
+    padding: 5px 10px 10px 10px;
+}
+
+.albumCard form {
+    position: relative;
+    left: 75px;
+}
+
+.deleteBtn {
+    color: hsl(270, 20%, 20%);
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 2px 5px;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+}
+
+.album {
+    font-size: 1.1rem;
+    color: hsl(270, 20%, 20%);
+    font-weight: bold;
+}
+
+.artist {
+    font-size: 0.9rem;
+    color: hsl(270, 20%, 40%);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.genre {
+    background-color: hsl(270, 20%, 20%);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    color: hsl(270, 15%, 90%);
+    font-weight: bold;
+    margin-top: 15px;
+    width: 90%;
+}

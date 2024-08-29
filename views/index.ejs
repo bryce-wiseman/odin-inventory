@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Home</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <header>
+        <h2><a href="/">Song Shelf</a></h2>
+        <form action="/" method="get">
+            <input type="text" name="search" id="search">
+            <button type="submit" id="searchBtn">Search</button>
+        </form>
+    </header>
+    <main>
+        <div id="sidebar">
+            <form action="/new" method="get">
+                <button type="submit" id="addAlbumBtn">Add New</button>
+            </form>
+            <br>
+            <form action="/" method="get">
+                <% let genreArr = [] %>
+                <% function genreSort() { %>
+                    <% console.log(this.innerText) %>
+                <% } %>
+                <% library.forEach((item) => { %>
+                    <% genreArr.push(item.genre) %>
+                <% }) %>
+                <% let uniqueGenres = Array.from(new Set(genreArr)) %>
+                <% uniqueGenres.forEach((genre) => { %>
+                    <button type="submit" class="genreBtn" name="genre" value=<%= genre %>><%= genre %></button>
+                <% }) %>
+            </form>
+        </div>
+        <div class="libraryDiv">
+            <% library.forEach((item) => { %>
+                <div class="albumCard">
+                    <form action="/delete" method="post">
+                        <button type="submit" class="deleteBtn" name="delete" value='<%= item.album %>'>x</button>
+                    </form>
+                    <img src="/dvd-152917_640.png" alt="image of a cd">
+                    <p class="album"><%= item.album %></p>
+                    <p class="artist"><%= item.artist %></p>
+                    <p class="genre"><%= item.genre  %></p>              
+                </div>
+            <% }) %>
+        </div>
+    </main>
+</body>
+</html>

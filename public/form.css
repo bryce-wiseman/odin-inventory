@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(270, 15%, 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+label {
+    color: hsl(270, 15%, 90%);
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+input {
+    height: 25px;
+    width: 400px;
+    margin: 5px 0px 20px 0px;
+}
+
+button {
+    height: 40px;
+    width: 80px;
+    background-color: hsl(270, 15%, 80%);
+    color: hsl(270, 15%, 20%);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: hsl(270, 15%, 90%);
+}
